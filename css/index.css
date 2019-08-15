@@ -130,6 +130,15 @@ table {
 * {
   box-sizing: border-box;
 }
+.navStyle {
+  display: flex;
+  justify-content: flex-end;
+}
+.nameStyle {
+  font-family: 'Lexend Peta', sans-serif;
+  font-size: 2rem;
+  padding-top: 20px;
+}
 @font-face {
   font-family: 'Lexend Peta';
   font-style: normal;
@@ -141,49 +150,70 @@ html,
 body {
   height: 100%;
 }
-html .bodyContainer,
-body .bodyContainer {
+.bodyContainer {
   width: 90%;
   padding: 20px;
   margin: 0 auto;
+  border: 1px solid red;
 }
-nav {
+.bodyContainer nav {
   display: flex;
   justify-content: flex-end;
 }
-a {
+.bodyContainer nav a {
   text-decoration: none;
   color: black;
   padding: 10px;
   font-size: 1.3rem;
 }
-.headShot {
+.bodyContainer .headShot {
   border-radius: 80px;
 }
-.name {
+.bodyContainer .name {
   font-family: 'Lexend Peta', sans-serif;
   font-size: 2rem;
   padding-top: 20px;
 }
-.intro {
+.bodyContainer .intro {
   padding: 20px;
   width: 50%;
 }
-.skills {
+.bodyContainer .skills {
   padding: 0 50px;
 }
-h2 {
-  font-size: 1.2rem;
-}
-ul.b {
+.bodyContainer .skills ul.b {
   list-style-type: square;
   padding-top: 10px;
 }
-h4 {
+.bodyContainer .skills h2 {
+  font-size: 1.2rem;
+}
+.bodyContainer h4 {
   padding-top: 20px;
   padding-left: 20px;
 }
-.experience {
+.bodyContainer .experience {
   padding: 20px;
   width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .bodyContainer nav a {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .bodyContainer .name {
+    font-size: 1.4rem;
+  }
+  .bodyContainer .headShot {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .bodyContainer .intro {
+    width: 100%;
+  }
+  .bodyContainer .experience {
+    width: 100%;
+  }
 }
