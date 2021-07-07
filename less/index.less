@@ -52,28 +52,39 @@ table {
 * {
     box-sizing: border-box;
 }
+@cent: flex;
+@theEnd: flex-end;
+
+.navStyle{
+    display: @cent;
+	justify-content: @theEnd;
+}
+
+.nameStyle{
+	font-family:'Lexend Peta', sans-serif;
+	font-size: 2rem;
+	padding-top: 20px;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Lexend+Peta&display=swap');
 html, body {
 	height: 100%;
+}
 	.bodyContainer{
 		width: 90%;
 		padding: 20px;
 		margin: 0 auto;
-	}
-}
+		
 
 nav {
-	display: flex;
-	justify-content: flex-end;
-}
-
-a{
-	text-decoration: none;
-	color: black;
-	padding: 10px;
-	font-size:1.3rem;
+	.navStyle();
+	a {
+		text-decoration: none;
+		color: black;
+		padding: 10px;
+		font-size: 1.3rem;
+	}
 }
 
 .headShot{
@@ -81,25 +92,22 @@ a{
 }
 
 .name{
-	font-family:'Lexend Peta', sans-serif;
-	font-size: 2rem;
-	padding-top: 20px;
+	.nameStyle();
 }
  .intro{
 	 padding: 20px;
 	 width: 50%;
- }
+ 	}
 
  .skills{
 	padding: 0 50px;
- }
-
- h2{
-	 font-size: 1.2rem;
- }
- ul.b {
-	 list-style-type: square;
-	 padding-top: 10px;
+	ul.b {
+		list-style-type: square;
+		padding-top: 10px;
+   }
+   h2{
+	font-size: 1.2rem;
+	}
 }
 
 h4{
@@ -110,4 +118,30 @@ h4{
 .experience{
 	padding: 20px;
 	width: 50%;
+	}
+	@media screen and (max-width: 500px){
+			
+		nav a {
+			width: 100%;
+			font-size: 1rem;
+			padding: 10px;
+		}
+	   
+	   .name{
+		   font-size:1.4rem;
+	   }
+
+	   .headShot{
+		   width: 100%;
+		   margin: 0 auto;
+		   padding-top: 20px;
+	   }
+
+	   .intro{
+		   width: 100%;
+	   }
+	   .experience{
+		   width: 100%;
+	   }
+   }
 }
